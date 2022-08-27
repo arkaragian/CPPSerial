@@ -51,7 +51,7 @@ int main() {
   //  57,600 bps, 8 data bits, no parity, and 1 stop bit.
   dcb.BaudRate = CBR_57600;   //  baud rate
   dcb.ByteSize = 8;           //  data size, xmit and rcv
-  dcb.Parity = NOPARITY;      //  parity bit
+  dcb.Parity   = NOPARITY;    //  parity bit
   dcb.StopBits = ONESTOPBIT;  //  stop bit
 
   fSuccess = SetCommState(hCom, &dcb);
