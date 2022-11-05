@@ -5,7 +5,7 @@
 namespace CPPSerial {
 void PrintCommState(DCB dcb) {
   //  Print some of the DCB structure values
-  _tprintf(TEXT("\nBaudRate = %d, ByteSize = %d, Parity = %d, StopBits = %d\n"),
+  _tprintf(TEXT("\nBaudRate = %lu, ByteSize = %d, Parity = %d, StopBits = %d\n"),
            dcb.BaudRate, dcb.ByteSize, dcb.Parity, dcb.StopBits);
 }
 }  // namespace CPPSerial
@@ -27,7 +27,7 @@ int main() {
 
   if (hCom == INVALID_HANDLE_VALUE) {
     //  Handle the error.
-    printf("CreateFile failed with error %d.\n", GetLastError());
+    printf("CreateFile failed with error %lu.\n", GetLastError());
     return (1);
   }
 
@@ -41,7 +41,7 @@ int main() {
 
   if (!fSuccess) {
     //  Handle the error.
-    printf("GetCommState failed with error %d.\n", GetLastError());
+    printf("GetCommState failed with error %lu.\n", GetLastError());
     return (2);
   }
 
@@ -58,7 +58,7 @@ int main() {
 
   if (!fSuccess) {
     //  Handle the error.
-    printf("SetCommState failed with error %d.\n", GetLastError());
+    printf("SetCommState failed with error %lu.\n", GetLastError());
     return (3);
   }
 
@@ -67,7 +67,7 @@ int main() {
 
   if (!fSuccess) {
     //  Handle the error.
-    printf("GetCommState failed with error %d.\n", GetLastError());
+    printf("GetCommState failed with error %lu.\n", GetLastError());
     return (2);
   }
 
