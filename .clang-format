@@ -1,4 +1,129 @@
+# vim: ft=yaml
+# Used with clang-format version 14.0.6
 ---
 Language:        Cpp
 BasedOnStyle:  Google
+AlignAfterOpenBracket: Align
+AlignArrayOfStructures: Right
 AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: Consecutive
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Left
+AlignOperands: true
+AlignTrailingComments: true
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: None
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+BitFieldColonSpacing: Both
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterObjCDeclaration: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+  IndentBraces: false
+  #BreakArrays: false #Used in clang 16
+BreakBeforeBinaryOperators: None
+BreakBeforeConceptDeclarations: true
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: AfterComma
+BreakStringLiterals: false
+ColumnLimit: 0
+CompactNamespaces: false
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 2
+Cpp11BracedListStyle: false
+DeriveLineEnding: false
+DerivePointerAlignment: false #Errors
+DisableFormat: false #Errors
+EmptyLineAfterAccessModifier: Never #Errors
+EmptyLineBeforeAccessModifier: Leave #Errors
+#FixNamespaceComments: true This one errors out. Dunno why.
+#We don't know the effect of the bellow option to the compilation correctness
+IncludeBlocks: Preserve
+IndentAccessModifiers: true
+IndentCaseBlocks: true
+IndentCaseLabels: true
+IndentExternBlock: Indent
+IndentGotoLabels: true
+IndentPPDirectives: BeforeHash
+#IndentRequiresClause: false #Requires clang 15
+IndentWidth: 2
+IndentWrappedFunctionNames: false
+#InsertBraces: true #Requires clang 15
+InsertTrailingCommas: Wrapped
+KeepEmptyLinesAtTheStartOfBlocks: false
+LambdaBodyIndentation: Signature
+MaxEmptyLinesToKeep: 2
+NamespaceIndentation: All
+PPIndentWidth: 2
+PackConstructorInitializers: CurrentLine
+
+PenaltyBreakAssignment: 100
+PenaltyBreakBeforeFirstCallParameter: 100
+PenaltyBreakFirstLessLess: 100
+PenaltyBreakOpenParenthesis: 100
+PenaltyExcessCharacter: 1
+PenaltyReturnTypeOnItsOwnLine: 100
+
+PointerAlignment: Left
+QualifierAlignment: Leave
+ReferenceAlignment: Right
+ReflowComments: true
+RemoveBracesLLVM: false
+#RequiresClausePosition: SingleLine #Requires clang 15
+SeparateDefinitionBlocks: Always
+#Do not sort includes as it may cause compilation errors
+SortIncludes: Never
+SortUsingDeclarations: false
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+#SpaceAroundPointerQualifiers: Don't know how to use this
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: Always
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: true
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 3
+SpacesInAngles: false
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+  Maximum: 0
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+Standard: Latest
+TabWidth: 2
+#UseCRLF: false
+UseTab: Never
+...
